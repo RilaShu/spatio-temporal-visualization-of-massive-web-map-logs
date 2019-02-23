@@ -1,0 +1,349 @@
+@charset "UTF-8";
+
+/********************************************/
+/* 		     Meta Data Renderer  	     	*/
+/********************************************/
+
+.meta-entry-parent {
+	position: relative;
+    float: right;
+    right: 50%;
+}
+
+.meta-entry {
+	float: right;
+    right: -50%;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.meta-entry-label {
+    position: relative;
+    color: #FFFFFF;
+	z-index: 1;
+}
+
+/********************************************/
+/* 		     Text Score Renderer  	     	*/
+/********************************************/
+
+.text-score-entry-parent {
+	position: relative;
+    float: right;
+    right: 50%;
+}
+
+.text-score-entry {
+    cursor: pointer;
+	float: right;
+    right: -50%;
+    position: relative;
+    z-index: 1;
+}
+
+.text-score-label {
+    position: relative;
+    font-weight: bold;
+    padding: 2px;
+	white-space: nowrap;
+	max-width: 200px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	z-index: 1;
+}
+
+.text-score-weight-bar {
+	position:absolute;
+	margin-left: 50%;
+	bottom: 0px;
+	border: 1px solid #000000;
+	z-index: 0;
+}
+
+.text-score-weight {
+	height:100%;
+	float:left;
+}
+
+.text-score-entry-count {
+	position: absolute;
+	right: calc(50% - 100px);
+	font-size: 10px;
+	bottom: 0px;
+	z-index: 1;
+}
+
+.count-summary {
+	position:absolute;
+	top: 10px;
+	right: 10px;
+	text-align: right;
+	color: #FFFFFF;
+	font-size: 0.8em;
+}
+
+/********************************************/
+/* 		  Text by Frequency Renderer  	  	*/
+/********************************************/
+
+.text-by-frequency-entry {
+	position:absolute;
+	width: 220px;
+	height: 20px;
+	left: 18px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.text-by-frequency-left {
+	position: relative;
+	float:left;
+	padding-top:2px;
+	padding-bottom:2px;
+	width: 105px;
+	height: 100%;
+    box-sizing: border-box;
+}
+
+.text-by-frequency-right {
+	position: relative;
+	float:right;
+	width: 115px;
+	height: 100%;
+}
+
+.text-by-frequency-label {
+	position:relative;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-bottom: 5px;
+}
+
+.text-by-frequency-bar {
+	position: relative;
+	float:left;
+	bottom: 0px;
+	border: 1px solid #000;
+	margin-left: -1px;
+    box-sizing: border-box;
+}
+
+/********************************************/
+/* 		     Word Cloud Renderer  	     	*/
+/********************************************/
+
+.word-cloud-label {
+	cursor: pointer;
+    font-weight: bold;
+	position:absolute;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 2px 5px 2px 5px;
+	text-overflow: ellipsis;
+}
+
+.word-cloud-label-temp {
+	position:relative;
+    font-weight: bold;
+	visibility:hidden;
+	display: inline-block;
+	padding: 2px 5px 2px 5px;
+	max-width: 180px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/********************************************/
+/* 		     Text By Topic Renderer  	     	*/
+/********************************************/
+.text-by-topic-box {
+	width: 256px;
+	height: 256px;
+}
+
+.text-topic-label {
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 18px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-top: 15px;
+	padding-left: 25px;
+	width: 216px;
+	height: 70px;
+	opacity: 0.75;
+}
+
+.text-topic-label:hover {
+	opacity: 1.0;
+}
+
+/********************************************/
+/* 		    Graph Node Renderer    	    	*/
+/********************************************/
+
+.community-node {
+	position:absolute;
+	cursor:pointer;
+	z-index:2;
+	pointer-events: all;
+}
+
+.community-critical-node {
+	position:absolute;
+	cursor:pointer;
+	z-index:3;
+	pointer-events: all;
+}
+
+.community-parent-node {
+	position:absolute;
+	cursor:pointer;
+	z-index:1;
+	pointer-events: none;
+}
+
+/********************************************/
+/* 	        Graph Label Renderer     	  	*/
+/********************************************/
+
+.node-label {
+	position:absolute;
+	white-space: nowrap;
+	text-align: center;
+	vertical-align: middle;
+	overflow: hidden;
+	cursor:pointer;
+	text-overflow: ellipsis;
+	pointer-events: all;
+}
+
+/********************************************/
+/*             Point Annotation             */
+/********************************************/
+
+.point-annotation-aggregate {
+    position:absolute;
+	pointer-events: all;
+    width: 0px;
+    height: 0px;
+    z-index: 0;
+}
+
+.point-annotation-aggregate:hover {
+    z-index: 1;
+}
+
+.point-annotation {
+    cursor: pointer;
+    position:absolute;
+	pointer-events: all;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    width: 8px;
+    height: 8px;
+    -webkit-transition: 0.1s ease-in-out;
+       -moz-transition: 0.1s ease-in-out;
+        -ms-transition: 0.1s ease-in-out;
+            transition: 0.1s ease-in-out;
+}
+
+.point-annotation-fill {
+    margin: -2px 2px 2px -2px;
+    z-index: 2;
+}
+
+.point-annotation-border {
+    pointer-events:none;
+    margin: -4px 0 0 -4px;
+    z-index: 1;
+}
+
+.point-annotation-single:hover.point-annotation {
+    width: 12px;
+    height: 12px;
+    margin: -2px 0px 0px -2px;
+}
+
+.point-annotation-aggregate:hover .point-annotation {
+    width: 12px;
+    height: 12px;
+}
+
+.point-annotation-aggregate:hover .point-annotation-fill {
+    margin: -4px 2px 2px -4px;
+}
+
+.point-annotation-aggregate:hover .point-annotation-border {
+    margin: -6px 0 0 -6px;
+}
+
+/********************************************/
+/*             Axis Annotation             */
+/********************************************/
+
+.axis-annotation {
+    cursor: pointer;
+    position:absolute;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    z-index:1;
+	-webkit-transition: top 0.1s ease-in-out;
+	   -moz-transition: top 0.1s ease-in-out;
+		-ms-transition: top 0.1s ease-in-out;
+			transition: top 0.1s ease-in-out;
+}
+
+.axis-annotation:hover {
+    z-index:2;
+}
+
+.axis-annotation-border {
+    pointer-events:none;
+    margin: -4px 0 0 -4px;
+    z-index: 1;
+}
+
+.axis-annotation-line {
+	cursor: pointer;
+    position:absolute;
+	-webkit-transition: height 0.1s ease-in-out;
+	   -moz-transition: height 0.1s ease-in-out;
+		-ms-transition: height 0.1s ease-in-out;
+			transition: height 0.1s ease-in-out;
+}
+
+/********************************************/
+/* 		             Other     		    	*/
+/********************************************/
+
+.clear {
+    clear: both;
+}
+
+.emphasized {
+  opacity: 1;
+}
+
+.de-emphasized {
+  opacity: 0.6;
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+}
+
+.de-emphasized:hover {
+  opacity: 1;
+  -webkit-filter: none;
+  		  filter: none;
+}
+
+.de-saturate {
+   -webkit-filter: brightness(50%);
+           filter: brightness(50%);
+}

@@ -1,0 +1,29 @@
+- label: Contents
+  path: user-guide
+  listType: ul
+  faIcon: question-circle
+  topics:
+  - label: Overview
+    path: 
+    bookmarks:
+
+  - label: Interface
+    path: interface
+    bookmarks:
+      - label: Map
+        anchor: map
+
+      - label: Layers
+        anchor: layers
+
+      - label: Description
+        anchor: description
+
+  - label: Navigation
+    path: navigation
+    bookmarks:
+      - label: Zoom
+        anchor: zoom
+
+      - label: Explore
+        anchor: explore

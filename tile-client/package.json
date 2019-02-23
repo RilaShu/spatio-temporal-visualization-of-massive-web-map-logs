@@ -1,0 +1,40 @@
+{
+  "name": "aperture-tiles-client",
+  "version": "0.4.0",
+  "private": true,
+  "author": "Oculus Info <www.oculusinfo.com>",
+  "description": "Aperture-Tiles Javascript Visualization Library",
+  "contributors": [
+    {
+      "name": "Kevin Birk",
+      "email": "kbirk@oculusinfo.com"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^9.0.7",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-csso": "^1.0.0",
+    "gulp-istanbul": "^0.8.1",
+    "gulp-jshint": "^1.10.0",
+    "gulp-mocha": "^2.0.1",
+    "gulp-run": "^1.6.7",
+    "gulp-uglify": "^1.1.0",
+    "jaguarjs-jsdoc": "0.0.1",
+    "jsdoc": "^3.3.0-beta3",
+    "jshint-stylish": "^1.0.1",
+    "lodash": "^3.6.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "bower": "./node_modules/.bin/bower install",
+    "buildjs": "./node_modules/.bin/gulp build-js",
+    "buildcss": "./node_modules/.bin/gulp build-css",
+    "build": "./node_modules/.bin/gulp build",
+    "test": "./node_modules/.bin/gulp test",
+    "lint": "./node_modules/.bin/gulp lint"
+  }
+}

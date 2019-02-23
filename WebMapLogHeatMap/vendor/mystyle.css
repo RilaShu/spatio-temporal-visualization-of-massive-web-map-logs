@@ -1,0 +1,90 @@
+.dateControl{
+	position: absolute;
+    width: 265px;
+    left: 42px;
+    top: 10px;
+    pointer-events: all;
+    border-radius: 4px;
+    padding: 10px 10px 10px 10px;
+    background-color: #333;
+    border: 1px solid #111;
+}
+.dataPanel{
+	border-radius: 4px;
+	background-color: #111;
+	height: 90px;
+}
+#datetitle{
+	float: left;
+    margin: 4px 0 0 5px;
+    font-size: 16px;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #ccc;
+	width: calc(100% - 34px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#datainput{
+	float: left;
+    margin: 4px 0 0 5px;
+    font-size: 16px;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #ccc;
+	width: calc(100% - 34px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#datequery{
+	float: left;
+    margin: 4px 10px 0px 5px;
+    font-size: 16px;
+	font-family: Helvetica, Arial, sans-serif;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#btnQuery{
+	border: 1px solid black;
+	border-radius: 2px;
+	background-color: #333;
+	color: #ccc;
+	font-size: 16px;
+	font-family: Helvetica, Arial, sans-serif;
+	padding: 2px 20px 2px 20px;
+}
+.IpShow{
+	position: absolute;
+    width: 24px;
+    height: 500px;
+    left: 42px;
+    top: 132px;
+    border-radius: 4px;
+    padding: 100px 2px 100px 2px;
+    background-color: #333;
+    border: 1px solid #111;
+}
+.IpEchart{
+	position: absolute;
+    width: 700px;
+    height: 700px;
+    left: 72px;
+    top: 132px;
+    border-radius: 4px;
+    padding: 0px;
+    background-color: #333;
+    border: 1px solid #111;
+    display: none;
+}
+#IpShowText{
+	color: #ccc;
+	font-size: 22px;
+	margin: 150px auto;
+}
+.ui-datepicker-title{
+	color: #ccc;
+}
+.ui-datepicker-calendar thead{
+	color: #ccc;
+}

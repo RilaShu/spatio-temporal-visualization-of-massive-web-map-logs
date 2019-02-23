@@ -1,0 +1,32 @@
+main:
+  - label: Tour
+    path: tour/
+
+  - label: Docs
+    path: docs/development/getting-started/installation/
+
+  - label: Demos
+    path: demos/
+
+  - label: Download
+    path: download/
+
+  - label: Contact
+    path: contact/
+
+docs:
+  - label: Development
+    path: docs/development/getting-started/installation/
+
+  - label: User Guide
+    path: docs/user-guide/
+
+tour:
+  - label: Overview
+    path: tour/
+
+  - label: System Description
+    path: tour/components/
+
+  - label: Process
+    path: tour/process/

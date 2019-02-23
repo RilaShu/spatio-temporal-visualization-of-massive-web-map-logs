@@ -1,0 +1,25 @@
+[
+	{
+		"id": "julia-set",
+		"public" :{
+			"name": "Julia Set",
+			"pyramid": {
+				"type": "AreaOfInterest",
+				"minX": -2,
+				"maxX": 2,
+				"minY": -2,
+				"maxY": 2
+			},
+		},
+		"private": {
+			"data" : {
+				"id": "julia.x.y.v",
+	            "pyramidio" : {
+	                "type" : "file",
+	                "root.path" : "${julia.root.path}",
+	                "extension" : "avro"
+	            }
+	        }
+	    }
+	}
+]

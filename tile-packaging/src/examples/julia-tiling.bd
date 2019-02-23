@@ -1,0 +1,19 @@
+# Define which fields we want to output, and the projection to use on them
+oculus.binning.projection=EPSG:4326
+oculus.binning.projection.autobounds=false
+oculus.binning.projection.minx=-2.0
+oculus.binning.projection.maxx=2.0
+oculus.binning.projection.miny=-2.0
+oculus.binning.projection.maxy=2.0
+oculus.binning.index.field.0=x
+oculus.binning.index.field.1=y
+oculus.binning.value.type=field
+oculus.binning.value.field=v
+oculus.binning.value.aggregation=min
+
+# Define the tile pyramid levels we want to generate.
+oculus.binning.levels.0=0,1
+oculus.binning.levels.1=2
+oculus.binning.levels.2=3
+oculus.binning.levels.3=4
+oculus.binning.levels.4=5

@@ -1,0 +1,63 @@
+description = "Useful utilites to help pyramid-based binning schemes (and others, as necessary)"
+
+// Pulls in the Java plugin
+apply plugin: "java"
+
+// Task to create a JAR from the all source set
+task sourcesJar(type: Jar, dependsOn: classes) {
+	classifier = "sources"
+	from sourceSets.main.allSource
+}
+
+// Task to create a javadoc JAR
+task javadocJar(type: Jar, dependsOn: javadoc) {
+	classifier = "javadoc"
+	from javadoc.destinationDir
+}
+
+task testJar(type: Jar) {
+    classifier = 'tests'
+    from sourceSets.test.output
+}
+
+configurations {
+	tests
+}
+
+artifacts {
+	tests testJar
+}
+
+task runBinVisualizer(type:JavaExec) {
+	main = "com.oculusinfo.binning.visualization.BinVisualizer"
+	classpath = sourceSets.main.runtimeClasspath
+}
+
+// Artifacts that will be produced when this project is built
+artifacts {
+	archives sourcesJar
+	archives javadocJar
+	archives testJar
+}
+
+// Jars / projects this project depends on.
+dependencies {
+	compile project(":factory-utilities")
+	compile "org.apache.hadoop:hadoop-common:$hadoopCommonVersion"
+	getDependencies().add("compile", "org.apache.hadoop:hadoop-core:$hadoopCoreVersion", {
+		exclude group: "asm", module: "asm"
+		exclude group: "org.mortbay.jetty", module: "servlet-api-2.5"
+		exclude group: "org.jboss.netty", module: "netty"
+	})
+	compile "org.apache.avro:avro:1.7.4"
+	compile "org.xerial:sqlite-jdbc:3.7.2"
+	compile "com.esotericsoftware.kryo:kryo:2.21"
+	compile "org.slf4j:slf4j-api:1.7.5"
+	compile "com.google.guava:guava:14.0.1"
+	compile 'org.elasticsearch:elasticsearch:1.5.2'
+	testCompile "junit:junit:4.8.1"
+
+	// Call to special handling for hbase dependencies - see top level build file for
+	// definition and explanation.
+	addHBaseDependencies()
+}

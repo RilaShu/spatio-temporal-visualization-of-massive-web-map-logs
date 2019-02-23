@@ -1,0 +1,74 @@
+plugins {
+	id "com.moowork.node" version "0.9"
+}
+
+// pull in maven publish plugin to let us upload the .zip file
+apply plugin: 'maven-publish'
+
+// module description
+description = "A basic map client that allows for client-side user interaction with"
+
+// The 'test' task runs 'npm run test', which in turn executes 'gulp test'
+task test( type: NpmTask ) {
+  args = ['run', 'test']
+}
+test.dependsOn assemble
+
+// Partial Builds, these builds non-minified files with source maps, assumes dependencies are installed
+// These should only ever be called by the gradle wtch plugin.
+task build_js( type: NpmTask ) {
+  args = ['run', 'buildjs']
+}
+build_js.inputs.dir "$projectDir/src"
+build_js.outputs.dir "$buildDir"
+
+task build_css( type: NpmTask ) {
+  args = ['run', 'buildcss']
+}
+build_css.inputs.dir "$projectDir/src"
+build_css.outputs.dir "$buildDir"
+
+// Full build, builds everything, will check for dependencies
+task build_full( type: NpmTask ) {
+  args = ['run', 'build']
+}
+build_full.inputs.dir "$projectDir/src"
+build_full.outputs.dir "$buildDir"
+build_full.dependsOn 'npmInstall'
+npmInstall.outputs.dir "$projectDir/node_modules"
+
+// Zip all the relevant files from the build directory
+task zipMinifiedFiles(type: Zip) {
+ 	from buildDir
+ 	include "*.js", "*.css"
+ 	destinationDir file( buildDir.getPath() + "/distribution" )
+}
+zipMinifiedFiles.dependsOn build_full
+assemble.dependsOn zipMinifiedFiles
+
+// The 'build' task is typically provided by the 'java' plugin, an empty task is added here to
+// provide a similar interface.
+task build {}
+build.dependsOn assemble
+build.dependsOn test
+
+// The 'install' task is typically provided by the 'maven' plugin, an empty task is added here to
+// provide a similar interface, with the implementation provided by the 'maven-publish' plugin.
+task install {}
+install.dependsOn assemble
+install.dependsOn publishToMavenLocal
+
+// Publish our zipped files to maven
+publishing {
+    publications {
+        uploadMaven(MavenPublication) {
+            artifact zipMinifiedFiles
+        }
+    }
+}
+
+idea {
+	module {
+		excludeDirs += [file("node_modules"), file("vendor")]
+	}
+}

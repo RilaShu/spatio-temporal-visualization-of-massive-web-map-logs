@@ -1,0 +1,18 @@
+# Conversion
+markdown: kramdown
+
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  auto_ids: true
+
+# Serving
+destination: ../_site/
+baseurl: ""
+exclude: ["img/resources/SiteComponents.png","sidebar.html","*/sidebar.html"]
+
+# Variables
+product: Aperture Tiles
+version: 0.7.0
