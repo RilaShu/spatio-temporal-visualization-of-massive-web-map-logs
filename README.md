@@ -1,4 +1,4 @@
-# Spatio-temporal visualization of massive web map logs, revised from Aperture Tile-Based Visual Analytics(https://github.com/unchartedsoftware/aperture-tiles, http://aperturetiles.com/).
+# Spatio-temporal visualization of massive web map logs, revised from Aperture Tile-Based Visual Analytics(https://github.com/unchartedsoftware/aperture-tiles).
 ## - **What's new?**<br>
 
 **1.Data Preprocessing(/logDataPreprocessing):**<br>
@@ -15,6 +15,7 @@
 ## - **Want to know more details?**<br>
 Look https://www.shushili.cn/wordpress/?cat=5 for more details.
 
+## - **Visualization**<br>
 ![image](https://github.com/RilaShu/spatio-temporal-visualization-of-massive-web-map-logs/raw/master/images/spatio-temporal-query.png)<br>
 ![image](https://github.com/RilaShu/spatio-temporal-visualization-of-massive-web-map-logs/raw/master/images/human.png)<br>
 ![image](https://github.com/RilaShu/spatio-temporal-visualization-of-massive-web-map-logs/raw/master/images/worm-IP.png)<br>
