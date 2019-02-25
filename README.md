@@ -11,6 +11,7 @@
 
 **3. Support for Spatio-temporal HBASE:**<br>
 - Spatio-temporal DataBase Support.
+- Support tens of millions records.
 
 ## - **Want to know more details?**<br>
 Look https://www.shushili.cn/wordpress/?cat=5 for more details.
