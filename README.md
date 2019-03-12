@@ -2,7 +2,7 @@
 ## - **What's new?**<br>
 
 **1.Data Preprocessing(/logDataPreprocessing):**<br>
-- Worm discernment from massive web map logs. Code: , a Spark Program build by SBT.
+- Worm discernment from massive web map logs. Code: IpFrequency.scala, a Spark Program build by SBT.
 
 **2. FrontEnd(/WebMapLogHeatMap):**<br>
 - Add webmap Service case WMTS.
