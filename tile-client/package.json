@@ -25,7 +25,7 @@
     "jaguarjs-jsdoc": "0.0.1",
     "jsdoc": "^3.3.0-beta3",
     "jshint-stylish": "^1.0.1",
-    "lodash": "^3.6.0",
+    "lodash": ">=4.17.5",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
